@@ -1,0 +1,32 @@
+require:
+  - rubocop-rails
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'scripts/**/*'
+    - 'bin/{rails,rake,bundle}'
+    - 'config/**/*'
+Metrics/ClassLength:
+  Max: 1000
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+Metrics/BlockLength:
+  Exclude:
+    - "**/config/environments/*"
+    - "**/*_spec.rb"
+    - "**/*_test.rb"
+    - "**/spec/spec_helper.rb"
+    - "**/spec/rails_helper.rb"
+    - "**/spec/factories/**.rb"
+    - "**/spec/migrations.rb"
+Metrics/MethodLength:
+  Exclude:
+  - "**/models/role.rb"
+Style/Documentation:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
