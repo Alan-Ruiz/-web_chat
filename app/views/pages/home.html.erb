@@ -1,1 +1,7 @@
 <h1>Hello world</h1>
+
+<% if current_user %>
+  <%= link_to "Join the chatroom", chatroom_path(@chatroom) %>
+<% else %>
+  <p>Please login or sign up to join the chatroom</p>
+<% end %>

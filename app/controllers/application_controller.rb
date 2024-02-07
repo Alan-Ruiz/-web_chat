@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: %i[username color])
   end
+
+  def after_sign_in_path_for(resource)
+    cookies.signed[:user_id] = resource.id
+    super
+  end
 end

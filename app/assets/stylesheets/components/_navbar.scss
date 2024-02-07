@@ -9,6 +9,12 @@
   .navbar-left {
     h1 {
       margin: 0;
+      font-size: 38px;
+      a {
+        text-decoration: none;
+        color: white;
+        -webkit-text-stroke: 0.7px black;
+      }
     }
   }
   
