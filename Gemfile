@@ -19,6 +19,8 @@ gem 'puma', '>= 5.0'
 # Devise for user sign-in, sign-up
 gem 'devise'
 
+gem 'rubocop-rails', require: false
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
@@ -48,6 +50,8 @@ gem 'bootsnap', require: false
 
 # For stylesheets
 gem 'sassc-rails'
+
+gem 'simple_form', github: 'heartcombo/simple_form'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
