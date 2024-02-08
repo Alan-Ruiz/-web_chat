@@ -2,7 +2,7 @@
 
 class ChatroomChannel < ApplicationCable::Channel
   def subscribed
-    return unless params['id'] && params['user_id'] # added this as there was a first subsciption without params
+    return reject unless params['id'] && params['user_id'] # added this as there was a first subsciption without params
 
     @chatroom = Chatroom.find(params[:id])
     @user = User.find(params[:user_id])
