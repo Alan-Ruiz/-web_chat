@@ -32,9 +32,10 @@ RSpec.describe ChatroomChannel, type: :channel do
     end
 
     it 'broadcasts a message' do
-      expect {
+      expect do
         perform :speak, message: 'Hello, world!'
-      }.to have_broadcasted_to(chatroom).with(hash_including(type: 'message', message: a_string_including('Hello, world!')))
+      end.to have_broadcasted_to(chatroom).with(hash_including(type: 'message',
+                                                               message: a_string_including('Hello, world!')))
     end
   end
 end
