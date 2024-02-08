@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: gray;
+  padding: 30px 20px;
+  background-color: #010640;
   color: #fff;
+  font-weight: 600;
   
   .navbar-left {
     h1 {
@@ -17,8 +18,21 @@
       }
     }
   }
+
+  .login-signup-links {
+    display: flex;
+  }
   
   .navbar-right {
+    display: flex;
+    a {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
     .avatar-container {
       width: 40px;
       height: 40px;

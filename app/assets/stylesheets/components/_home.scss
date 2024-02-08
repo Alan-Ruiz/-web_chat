@@ -1,0 +1,22 @@
+#home-contianer {
+  padding-left: 30px;
+
+  h1 {
+    font-size: 38px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+
+    &:hover {
+      background-color: #010640;
+      color: white;
+      transition: 0.3s;
+    }
+  }
+}

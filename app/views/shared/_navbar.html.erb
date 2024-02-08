@@ -1,10 +1,10 @@
 <nav class="navbar">
-    <div class="navbar-left">
-      <h1><%= link_to "Web Chat", root_path %></h1>
-    </div>
-    <div class="navbar-right">
+  <div class="navbar-left">
+    <h1><%= link_to "Web Chat", root_path %></h1>
+  </div>
+  <div class="navbar-right">
     <% if user_signed_in? %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <div class="avatar-container">
         <%= content_tag :div, class: "avatar" do %>
           <%= current_user.username.present? ? current_user.username[0].upcase : "A" %>
@@ -17,4 +17,4 @@
       </div>
     <% end %>
   </div>
-  </nav>
+</nav>

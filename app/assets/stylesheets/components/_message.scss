@@ -5,3 +5,19 @@
 .message-right {
   text-align: right;
 }
+
+.message-container {
+  display: grid;
+
+  i {
+    font-size: 12px;
+  }
+
+  .user-name {
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+}

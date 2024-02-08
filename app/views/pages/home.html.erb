@@ -1,7 +1,9 @@
-<h1>Hello world</h1>
-
-<% if current_user %>
-  <%= link_to "Join the chatroom", chatroom_path(@chatroom) if @chatroom %>
-<% else %>
-  <p>Please register to join the chatroom</p>
-<% end %>
+<section id='home-contianer'>
+  <% if current_user %>
+    <h1>Hello <%= current_user.username.capitalize %></h1>
+    <%= link_to "Join the chatroom", chatroom_path(@chatroom) if @chatroom %>
+  <% else %>
+    <h1>Hello stranger</h1>
+    <p>Please register to join the chatroom</p>
+  <% end %>
+</section>
