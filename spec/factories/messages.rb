@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :message do
     content { 'MyString' }
-    chatroom { nil }
-    user { nil }
+    chatroom { Chatroom.first || association(:chatroom) }
+    user { User.first || association(:user) }
   end
 end

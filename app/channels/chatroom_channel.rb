@@ -11,7 +11,7 @@ class ChatroomChannel < ApplicationCable::Channel
 
   def speak(data)
     message = current_user.messages.create!(content: data['message'], chatroom: @chatroom)
-    socket = { id: message.id, message: render_message(message), type: 'message', user_id: params[:user_id]}
+    socket = { id: message.id, message: render_message(message), type: 'message', user_id: params[:user_id] }
     self.class.broadcast_to(@chatroom, socket)
   end
 

@@ -5,6 +5,10 @@ require 'rails_helper'
 RSpec.feature 'User login', type: :feature do
   let(:user) { User.create(email: 'user@example.com', username: 'username', password: 'password') }
 
+  before do
+    @chatroom = Chatroom.create(name: 'Test Chatroom')
+  end
+
   scenario 'user navigates to login page and successfully logs in', js: true do
     visit new_user_session_path
 

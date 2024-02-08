@@ -3,6 +3,11 @@
 require 'rails_helper'
 
 RSpec.feature 'User registration', type: :feature do
+
+  before do
+    @chatroom = Chatroom.create(name: 'Test Chatroom')
+  end
+  
   scenario 'user navigates to sign up page and successfully signs up', js: true do
     visit new_user_registration_path
 
